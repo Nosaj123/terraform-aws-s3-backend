@@ -6,6 +6,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "s3-backend" {
   bucket = var.aws_s3_bucket
+  force_destroy = "true"
 }
 
 resource "aws_s3_bucket_versioning" "s3-backend-versioning" {
